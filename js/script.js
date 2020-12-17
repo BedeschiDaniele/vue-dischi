@@ -2,7 +2,7 @@ var app = new Vue (
   {
     el: '.root',
     data: {
-     randomEmails:[]
+     discs:[]
   },
     methods: {
   },
@@ -10,7 +10,8 @@ var app = new Vue (
     axios
     .get('https://flynn.boolean.careers/exercises/api/array/music')
     .then((result) => {
-     this.randomEmails.push(result.data.response);
+     this.discs = result.data.response;
+     console.log(this.discs);
       });
     }
   }
