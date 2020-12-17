@@ -9,10 +9,17 @@
   </head>
   <body>
     <div class="root">
+      <!-- Logo -->
       <header>
         <img src="https://pbs.twimg.com/profile_images/1274694068254265344/aQ0ltExT.jpg" alt="e-sound">
         <h1>eSound</h1>
       </header>
+      <!-- Scelta del genere musicale -->
+        <select class="kind-music">
+          <option value="">Choose a kind of music</option>
+          <option v-for="genere in generes" value="">{{genere}}</option>
+        </select>
+      <!-- Lista di tutti i cd -->
       <div class="container-cd">
         <div v-for="disc in discs" class="cd">
           <img :src="disc.poster" alt="disc.author">
