@@ -15,6 +15,7 @@ h1 {
 header {
   display: flex;
   align-items: center;
+  width: 100%;
   height: 80px;
   background-color: black;
 }
@@ -24,15 +25,22 @@ header img {
 
 .container-cd {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 200px;
+  width: 80%;
+  margin: auto;
+  padding: 100px 0
 }
 .cd {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-
+  height: 380px;
+  flex-basis: 200px;
+  margin: 20px;
+  background: rgb(52, 46, 112);
 }
 .cd img {
   width: 160px;
