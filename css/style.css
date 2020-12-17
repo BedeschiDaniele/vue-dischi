@@ -40,8 +40,13 @@ header img {
   height: 380px;
   flex-basis: 200px;
   margin: 20px;
+  padding: 10px;
+  color: white;
   background: rgb(52, 46, 112);
 }
 .cd img {
   width: 160px;
+}
+#title {
+  font-size: 22px;
 }
