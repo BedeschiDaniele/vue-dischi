@@ -15,13 +15,13 @@
         <h1>eSound</h1>
       </header>
       <!-- Scelta del genere musicale -->
-        <select class="kind-music">
-          <option value="">Choose a kind of music</option>
-          <option v-for="genere in generes" value="">{{genere}}</option>
+        <select v-model="kindMusic" id="kind-music">
+          <option value="all">All music</option>
+          <option v-for="genere in generes" :value="genere">{{genere}}</option>
         </select>
       <!-- Lista di tutti i cd -->
       <div class="container-cd">
-        <div v-for="disc in discs" class="cd">
+        <div v-for="disc in discs" v-if="kindMusic==disc.genre || kindMusic=='all' " class="cd">
           <img :src="disc.poster" alt="disc.author">
           <h3>{{disc.author}}</h3>
           <span id="title">{{disc.title}}</span>

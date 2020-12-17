@@ -3,11 +3,10 @@ var app = new Vue (
     el: '.root',
     data: {
      discs:[],
-     generes:[]
+     generes:[],
+     kindMusic:"all"
   },
     methods: {
-      kindMusic: function () {
-      }
   },
     mounted: function () {
     axios
@@ -16,7 +15,6 @@ var app = new Vue (
      this.discs = result.data.response;
      for (var i = 0; i < this.discs.length; i++) {
        let kind = this.discs[i].genre;
-       console.log(this.kind);
        if (!this.generes.includes(kind)) {
          this.generes.push(kind)
        }
