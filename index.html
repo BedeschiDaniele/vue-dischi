@@ -21,7 +21,7 @@
         </select>
       <!-- Lista di tutti i cd -->
       <div class="container-cd">
-        <div v-for="disc in discs" v-if="kindMusic==disc.genre || kindMusic=='all' " class="cd">
+        <div v-if="kindMusic==disc.genre || kindMusic=='all'" v-for="disc in discs" class="cd">
           <img :src="disc.poster" alt="disc.author">
           <h3>{{disc.author}}</h3>
           <span id="title">{{disc.title}}</span>
